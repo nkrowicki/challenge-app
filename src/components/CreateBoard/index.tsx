@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import cn from 'classnames';
+
 interface Props {
   setBoard: (x: number, y: number) => void;
 }
@@ -9,6 +11,7 @@ function Board({ setBoard }: Props) {
   const handleSetValue = (e: React.ChangeEvent<HTMLInputElement>) =>
     setValues({ ...values, [e.target.name]: Number(e.target.value) });
   const handleSetBoard = () => setBoard(values.x, values.y);
+  const disableButton = !(values.x > 0 && values.y > 0);
 
   return (
     <>
@@ -42,8 +45,15 @@ function Board({ setBoard }: Props) {
           <div className="flex justify-center">
             <button
               type="button"
-              className="bg-blue-500 text-white font-bold px-5 py-2 rounded focus:outline-none shadow hover:bg-blue-700 transition-colors"
+              className={cn(
+                'bg-blue-500 text-white font-bold px-5 py-2 rounded focus:outline-none shadow hover:bg-blue-700 transition-colors',
+                {
+                  'bg-gray-500 hover:bg-gray-500 cursor-not-allowed':
+                    disableButton,
+                }
+              )}
               onClick={handleSetBoard}
+              disabled={disableButton}
             >
               Create!
             </button>

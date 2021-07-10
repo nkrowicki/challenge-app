@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import cn from 'classnames';
+import Button from '../Button';
 
 interface Props {
   setBoard: (x: number, y: number) => void;
@@ -43,20 +43,11 @@ function Board({ setBoard }: Props) {
             </div>
           </div>
           <div className="flex justify-center">
-            <button
-              type="button"
-              className={cn(
-                'bg-blue-500 text-white font-bold px-5 py-2 rounded focus:outline-none shadow hover:bg-blue-700 transition-colors',
-                {
-                  'bg-gray-500 hover:bg-gray-500 cursor-not-allowed':
-                    disableButton,
-                }
-              )}
+            <Button
               onClick={handleSetBoard}
               disabled={disableButton}
-            >
-              Create!
-            </button>
+              text="Create!"
+            />
           </div>
         </div>
       </form>

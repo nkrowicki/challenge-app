@@ -8,9 +8,9 @@ Frontend Challenge Built with:
 - Eslint
 - Deploy to Netlify Platform.
 
-## Information:
+## Information:
 
-### Notes:
+### Notes:
 
 - I used the boilerplate https://github.com/ixartz/Next-js-Boilerplate as I found it very complete and practical because it already included Eslint, Tailwindcss and Typescript.
 

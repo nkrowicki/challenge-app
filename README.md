@@ -40,4 +40,4 @@ To run the test enter the following command:
 The project has eslint established, to execute it enter the following command:
 - npm run lint
 
-View app online: [APP](https://challenge-m1r4.netlify.app/)
+View app online: [APP](https://challenge-m1r4.vercel.app/)

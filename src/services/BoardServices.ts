@@ -1,7 +1,5 @@
 import { MOCK_RESPONSE } from '../../mocks/Board';
-import { Board } from '../types/Board';
 
-// Fake Services
 export const getBoard = async () => {
   return new Promise<any>((resolve, reject) => {
     setTimeout(() => {
@@ -16,8 +14,7 @@ export const getBoard = async () => {
   });
 };
 
-// eslint-disable-next-line unused-imports/no-unused-vars
-export const postBoard = async (board: Board) => {
+export const postBoard = async () => {
   return new Promise<any>((resolve, reject) => {
     setTimeout(() => {
       if (Math.random() > 0.3) {

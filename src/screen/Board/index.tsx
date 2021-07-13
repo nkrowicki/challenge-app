@@ -35,7 +35,7 @@ function Board({ matrix, setMatrix }: Props) {
             typeof mockedMatrix[y] !== 'undefined' &&
             typeof mockedMatrix[y]?.[x] !== 'undefined'
           )
-            mockedMatrix[y][x] = index;
+            (mockedMatrix[y] || [])[x] = index;
         });
       });
       setMatrixClusters(mockedMatrix);

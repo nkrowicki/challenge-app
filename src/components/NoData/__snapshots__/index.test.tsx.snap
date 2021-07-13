@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check that NoData component shows correctly 1`] = `
+<p
+  class="text dark text-center"
+>
+  No results found
+</p>
+`;

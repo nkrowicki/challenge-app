@@ -1,17 +1,18 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-import Board from '../components/Board';
 import CreateBoard from '../components/CreateBoard';
 import Menu from '../components/Menu';
 import { MENU } from '../components/Menu/constants';
 import { Meta } from '../layout/Meta';
+import Board from '../screen/Board';
 import { Main } from '../templates/Main';
+import { Board as BoardType } from '../types/Board';
 import { AppConfig } from '../utils/AppConfig';
 
 const Index = () => {
   const [menu, setMenu] = useState(MENU.CREATE);
   const [boardSize, setBoardSize] = useState<[number, number]>();
-  const [matrix, setMatrix] = useState<boolean[][]>();
+  const [matrix, setMatrix] = useState<BoardType>();
   const isFirstRun = useRef(true);
 
   const handleSetBoard = (x: number, y: number) => {

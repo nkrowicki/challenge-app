@@ -8,7 +8,7 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="h-full bg-gray-200">
+  <div className="h-screen bg-gray-200">
     {props.meta}
     <div className="max-w-screen-md mx-auto">
       <div className="border-b border-gray-300 py-10">
